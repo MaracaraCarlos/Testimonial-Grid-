@@ -1,0 +1,152 @@
+/* Resert */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --primary-white: hsl(0, 0%, 100%);
+    /* Neutral */
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);    
+}
+
+/* Main Styling */
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: var(--light-grayish-blue);
+}
+
+h3,
+p {
+    font-size: 13px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.daniel,
+.jonathan,
+.patrick {
+    color: var(--primary-white);
+}                                    /*Pendiente escalar de grises el parrafo y el puesto*/
+
+.container {
+    width: 80%;
+    max-width: 1040px;
+    height: 70vh;
+    margin: auto;
+    margin-top: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Utility classes */
+.norma {
+    border-radius: 8px;
+    padding: 20px;
+
+    display: grid;
+    grid-template-rows: 60px 90px 1fr;
+    grid-template-columns: 60px 1fr;
+}
+
+.parrafo {
+    opacity: 0.5;
+}
+
+img {
+    width: 50px;
+    border-radius: 100%;
+    /* border: solid var(--primary-white) 2px;  pendiente poner a cada uno su borde personalizado*/
+}
+
+/* Grid */
+.daniel {
+    background: var(--moderate-violet);
+    /* position: relative; */
+
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+.daniel .capa {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: 70% 0;
+    z-index: 1;
+}
+
+.jonathan {
+    background: var(--very-dark-grayish-blue);
+
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.jeanette {
+    background: var(--primary-white);
+
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.patrick {
+    background: var(--very-dark-blackish-blue);
+
+    grid-column: 2/4;
+    grid-row: 2;
+}
+
+.kira {
+    background: var(--primary-white);
+
+    grid-column: 4;
+    grid-row: 1/3;
+}
+
+/* Grid of single card */
+.imagenes {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.names {
+    grid-row: 1;
+    grid-column: 2;
+
+    align-self: center;
+    padding-left: 10px;
+}
+
+.puesto {
+    opacity: .7;
+}
+
+.sentence {
+    grid-row: 2;
+    grid-column: 1/3;
+
+    z-index: 2;
+}
+
+.parrafo {
+    grid-row: 3;
+    grid-column: 1/3;
+}
